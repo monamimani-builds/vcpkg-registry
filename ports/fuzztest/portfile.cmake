@@ -13,8 +13,8 @@ vcpkg_from_github(
 vcpkg_cmake_configure(
   SOURCE_PATH "${SOURCE_PATH}"
 
-  # OPTIONS
-  # "-DFETCHCONTENT_FULLY_DISCONNECTED=OFF"
+  OPTIONS
+  "-DFETCHCONTENT_FULLY_DISCONNECTED=OFF"
 
   # "-DFETCHCONTENT_FULLY_DISCONNECTED=ON"
   # "-DFETCHCONTENT_SOURCE_DIR_ABSEIL-CPPLIB=${SOURCE_PATH_ABSEIL}"
@@ -24,9 +24,9 @@ vcpkg_cmake_configure(
 
 vcpkg_cmake_install()
 
-vcpkg_cmake_config_fixup(CONFIG_PATH "lib/cmake/${PORT}")
-
-# vcpkg_fixup_pkgconfig()
+# vcpkg_cmake_config_fixup(CONFIG_PATH "lib/cmake/${PORT}")
+# vcpkg_cmake_config_fixup()
+vcpkg_fixup_pkgconfig()
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
 
