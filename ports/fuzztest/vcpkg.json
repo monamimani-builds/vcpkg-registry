@@ -1,8 +1,8 @@
 {
   "name": "fuzztest",
   "version": "0.0.1",
-  "homepage": "https://github.com/google/fuzztest",
   "description": "FuzzTest is a C++ testing framework for writing and executing fuzz tests, which are property-based tests executed using coverage-guided fuzzing under the hood.",
+  "homepage": "https://github.com/google/fuzztest",
   "license": "BSD-3-Clause",
   "dependencies": [
     {
